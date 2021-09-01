@@ -5,12 +5,16 @@
 
 
 
-  <head>
+  <head id="index"> </head>
     <meta charset="utf- 8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Melodie M</title> <!-- Visible dans onglet + browser --> 
     <script src="https://kit.fontawesome.com/1302081e20.js" crossorigin="anonymous"></script> <!-- script permettant d'ajouter des icones --> 
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   
 
@@ -18,15 +22,15 @@
 
 
   <body>
-   
+
       <div>
           <header> <!-- Toujours a l'interieur des div car exprime la partie-->
               <image><a>LOGO</a></image> <!-- Ici png + lien permettant de revenir  -->
               <nav>
                 <ul>
-                    <li><a href="index.html">Work</a></li><!-- S'affiche en bullet OL s'affiche en 1,2,3-->
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="CV.html" target="_blank">CV</a></li><!-- blank = ouverture d'un nouvel onglet -->
+                    <li><a href="#index.html">Work</a></li><!-- S'affiche en bullet OL s'affiche en 1,2,3-->
+                    <li><a href="#about.html"target="_self">About</a></li>
+                    <li><a href="#CV.html" target="_blank">CV</a></li><!-- blank = ouverture d'un nouvel onglet -->
                     <li><a href="#Contact">Contact</a></li> <!-- DIESE ref to ID footer contact -->
                     <!--+++ articles, cv ... -->
                 </ul>
@@ -40,7 +44,7 @@
           <main> <!-- Toujours a l'interieur des div car exprime la partie-->
 
             <div>
-                <h1>Hi, my name is Mélodie Miribel<br>
+                <h1>Hi, my name is Mélodie Miribel <br>
                 Digital Marketer turned UX Designer and based between London/Paris.</h1> <!-- Ajouter image perso -->
               </div>
               <div>
@@ -52,14 +56,14 @@
 
         <div> 
             <div>
-                <h2>My work</h2>
+                <h2 class="majuscules">My work</h2>
             </div>
             <div>
                 <div>                  
                     <div>
-                        <h3>Project 1 title </h3>
+                        <h3> Project 1 title </h3> 
                         <p>Description Project 1 </p>
-                        <a href="">Read more</a><!-- button or link label -->
+                        <a href="#" class="button"> Read more</a> <!-- button or link label -->
                     </div>
                       <picture>
                         <source srcset="images/P1/Mockup mobile/Entree-mockup-mobile.jpg" media="(max-width:767px)">
@@ -68,7 +72,7 @@
                     <div>
                         <h3>Project 2 title </h3>
                         <p>Description Project 2 </p>
-                        <a href="">Read more</a><!-- button or link label -->
+                        <a href="#" class="button"> Read more</a> <!-- button or link label -->
                     </div>                  
                     <picture>
                         <source srcset="images/Coming soon/Coming-soon-600x400.jpg" media="(max-width:767px)">
@@ -77,7 +81,7 @@
                       <div>
                         <h3>Project 3 title </h3>
                         <p>Description Project 3 </p>
-                        <a href="">Read more</a><!-- button or link label -->
+                        <a href="#" class="button"> Read more</a> <!-- button or link label -->
                     </div>
                     <picture>
                         <source srcset="images/Coming soon/Coming-soon-600x400.jpg" media="(max-width:767px)">
@@ -96,7 +100,7 @@
 
   <footer id="contact">  <!-- ID ref to the DIESE dans nav contact -->
       <div>
-          <h2>Get in touch</h2>
+          <h2 class="majuscules">Get in touch</h2>
       </div>
          <div>
           <p>You like my job and want to stay in touch? Be free to contact me for any opportunities </p> <br>
@@ -107,13 +111,13 @@
        <div><i class="fas fa-arrow-down"></i></div>
      
        <div>
-            <a href="mailto:melodie.miribel(at)gmail.com"> melodie.miribel(at)gmail.com</a>          
+            <a href="mailto:melodie.miribel(at)gmail.com" class="button"> melodie.miribel(at)gmail.com</a>          
        </div>
       
        <div>
         <!--Social Media Layout and Placeholders-->
         <ul>
-            <li><a href="LINKEDIN-URL" target="_blank">
+            <li><a href="LINKEDIN-URL" target="_blank"> <!--blank = ouvre une nouvelle page-->
                 <svg height="67px" id="Layer_1" style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="67px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#007AB9;"/></svg></li>
             <li><a href="INSTAGRAM-URL">
                 <svg enable-background="new 0 0 1024 1024" height="1024px" id="Instagram_2_" version="1.1" viewBox="0 0 1024 1024" width="1024px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Background"><linearGradient gradientTransform="matrix(0.9397 0.3421 0.3421 -0.9397 276.2042 765.8284)" gradientUnits="userSpaceOnUse" id="bg_1_" x1="463.9526" x2="-194.4829" y1="-73.1143" y2="711.4479"><stop offset="0" style="stop-color:#20254C"/><stop offset="0.0571" style="stop-color:#29254D"/><stop offset="0.1502" style="stop-color:#41234F"/><stop offset="0.2679" style="stop-color:#692152"/><stop offset="0.4039" style="stop-color:#A01F57"/><stop offset="0.5333" style="stop-color:#DA1C5C"/><stop offset="0.5924" style="stop-color:#DC255A"/><stop offset="0.6889" style="stop-color:#E13D56"/><stop offset="0.8106" style="stop-color:#EA654E"/><stop offset="0.9515" style="stop-color:#F69C44"/><stop offset="1" style="stop-color:#FBB040"/></linearGradient><circle cx="512.001" cy="512" fill="url(#bg_1_)" id="bg" r="512"/></g><g id="Instagram_3_"><circle cx="658.765" cy="364.563" fill="#FFFFFF" r="33.136"/><circle cx="512.001" cy="512" fill="none" r="121.412" stroke="#FFFFFF" stroke-miterlimit="10" stroke-width="45"/><path d="M255.358,612.506c0,91.127,73.874,165,165,165   h183.283c91.127,0,165-73.873,165-165V411.495c0-91.127-73.873-165-165-165H420.358c-91.127,0-165,73.873-165,165V612.506z" fill="none" stroke="#FFFFFF" stroke-miterlimit="10" stroke-width="45"/></g></svg>  </a></li>

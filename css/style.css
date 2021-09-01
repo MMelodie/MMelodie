@@ -1,17 +1,20 @@
 
-
-
 body {
   background-color: #ffffff;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px; /* Sets the font size to 16px */
   font-weight: 300; /* Sets the font weight to 300 */
   line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
-  color: #4a4a4a;
+  color: rgba(0,0,0);
+}
+
+.majuscules {
+  text-transform: uppercase;
 }
 
 h1, h2, h3, h4 {
   line-height: 1.4;
+
 }
 h1 {
   font-size: 2.75em;
@@ -21,6 +24,7 @@ h1 {
 h2 {
   font-size: 2.25em;
   font-weight: 700;
+
 }
 
 h3 {
@@ -31,3 +35,42 @@ h4 {
   font-size: 1.35em;
   font-weight: 400;
 }
+
+
+p {
+  font-size: 1.35em;
+  font-weight: 400;
+  color: rgb(127, 140, 141);
+}
+
+img {
+  width: 100%;
+}
+
+
+
+
+.button {
+  display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
+  background-color: #FA8072;
+  color: #ffffff; /* needed to override the default link color */
+  font-weight: 400;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid #994c30; /* width of the border, type, color */
+  transition: 0.2s opacity;
+}
+
+
+
+/* Mélodie Miribel text-transform: capitalize; */
+/* Melodie M text-transform: capitalize; */
+
+ 
+/*
+Colors used:
+Primary Color (Black): #000000; <!-- rgb(0, 0, 0)--> 
+Secondary Color (Grey): #7F8C8D 	<!-- rgb(127, 140, 141 ) --> 
+Tertiary color (orange): #FA8072	<!--rgb(250, 128, 114)--> 
+Light tertiary color (light orange): #FFA07A <!-- rgb(255, 160, 122) --> 
+*/
