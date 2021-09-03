@@ -182,4 +182,6 @@ footer {
   text-align: center;
   position:fixed;
   margin: auto;
+  display: inline-block;
+  width: 100%
 }
