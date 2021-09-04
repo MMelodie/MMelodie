@@ -180,8 +180,36 @@ ul > li > a {
 
 footer {
   text-align: center;
-  position:fixed;
+  /* position:fixed;  has been removed bcse otherwise, footer is delated? */
   margin: auto;
   display: inline-block;
   width: 100%
+} 
+
+/* = Cours 1.8 ======================================================================================================== */
+
+
+
+/* ============================== Breakpoint pour ecrans 640px et + (to 1024px ici) = "Ne sera appliqué que..."
+@media only screen and (min-width: 640px) {} Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {
+}
+
+
+
+
+
+/* ==============================
+Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {
+}
+
+
+
+/* ==============================
+X-large devices (1440px or larger)
+================================= */
+@media only screen and (min-width: 1440px) {
 }
