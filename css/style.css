@@ -1,3 +1,6 @@
+/* General:
+- Use em values for headers */
+
 * {
   box-sizing: border-box; /* actual width of the container mentioned above would change to 100px (even including the 20px padding and 4px borders) as opposed to 124px. */
 }
@@ -190,11 +193,53 @@ footer {
 
 
 
+
+
+
+
+
 /* ============================== Breakpoint pour ecrans 640px et + (to 1024px ici) = "Ne sera appliqué que..."
-@media only screen and (min-width: 640px) {} Medium devices (640px and larger)
-================================= */
+- @media only screen and (min-width: 640px) { } Medium devices (640px and larger)
+- Unset allows to resets the property to either its initial (original) value or to the inherited value (need to be removed for medium size screenslogo and navigation are no longer centered but, instead, left-aligned.
+- <nav> element was with a width of 100%. Reset it to auto will no longer takes it up to the full width of the screen but, still as wide as its content and aligned with the logo. 
+- assign it the float: right; property, as this will ensure it floats to the right of the logo . 
+- As we are on new size screens, the little white space between menu and hero is back: change the value of the top padding to 99px
+- Font sizes need to switch from 16px to 18px for larger screen size. No modif on titles if em values are used otherwise ADJUST THEM
+- heading in your hero section: both the heading and paragraph have been centered. Add text-align: center; to #hero + Have <span> tag in your <h1> be on the next line (so that the “I’m a…” line starts a new line). To do this, change the display of the <span> tag in your hero section from inline (the default) to block. (refer to #hero span )
+
+
+= */
+
+
 @media only screen and (min-width: 640px) {
+  header {
+    text-align: unset;
+    padding: 99px 0 13px;
+    font-size: 18px;
+  }
+
+  nav {
+    width: auto;
+    float: right;
+    margin-top: 4px;
+  }
 }
+
+#hero span {
+  display: block;
+}
+
+
+/* = Unset allows to resets the property to either its initial (original) value or to the inherited value (need to be removed for medium size screens 
+logo and navigation are no longer centered but, instead, left-aligned.= */
+
+
+
+
+
+
+
+
 
 
 
