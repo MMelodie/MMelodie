@@ -6,6 +6,8 @@
   box-sizing: border-box; /* actual width of the container mentioned above would change to 100px (even including the 20px padding and 4px borders) as opposed to 124px. */
 }
 
+
+
 header {
   background-color:#ffe4c4;
   text-align: center;
@@ -70,8 +72,6 @@ img {
 }
 
 
-
-
 .button {
   display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
   background-color: #FA8072;
@@ -80,10 +80,15 @@ img {
   padding: 10px;
   border-radius: 3px;
   border-bottom: 2px solid #994c30; /* width of the border, type, color */
-  transition: 0.2s opacity;
+  transition-duration: 0.2s;
+  transition-property: opacity;
   display:inline-block;
   margin:  40px;
 }
+.button:hover {
+  opacity: 0.8;
+}
+
 
 .background-text {
 color :rgb(255, 160, 122)
@@ -99,11 +104,14 @@ color :rgb(255, 160, 122)
 
 .logo {
   max-width: 250px;
+  text-align: left;
 }
 
 main {
   padding-top: 133px;
 }
+
+
 
 
 
@@ -127,11 +135,15 @@ Light tertiary color (light orange): #FFA07A <!-- rgb(255, 160, 122) -->
 
 .container {
   padding: 0 15px;
+  text-align: center; /* Centers text */
 }
 
 
 
-#work .row { padding-bottom: 25px; border-bottom: 1px solid #4a4a4a; }
+#work .row { 
+padding-bottom: 25px; 
+border-bottom: 1px solid #4a4a4a; 
+}
 
 
 #hero h1 {
@@ -193,12 +205,6 @@ footer {
 /* = Cours 1.8 ======================================================================================================== */
 
 
-
-
-
-
-
-
 /* ============================== Breakpoint pour ecrans 640px et + (to 1024px ici) = "Ne sera appliqué que..."
 - @media only screen and (min-width: 640px) { } Medium devices (640px and larger)
 - Unset allows to resets the property to either its initial (original) value or to the inherited value (need to be removed for medium size screenslogo and navigation are no longer centered but, instead, left-aligned.
@@ -207,10 +213,11 @@ footer {
 - As we are on new size screens, the little white space between menu and hero is back: change the value of the top padding to 99px
 - Font sizes need to switch from 16px to 18px for larger screen size. No modif on titles if em values are used otherwise ADJUST THEM
 - heading in your hero section: both the heading and paragraph have been centered. Add text-align: center; to #hero + Have <span> tag in your <h1> be on the next line (so that the “I’m a…” line starts a new line). To do this, change the display of the <span> tag in your hero section from inline (the default) to block. (refer to #hero span )
-
-
-= */
-
+- For a total of 12 columns = 100% we want to /2 and have a 6 colomns = 50% // The col is what tells us this is for columns, the md stands for medium devices (screen sizes), and the 6 is for the 6-column span we want this column to occupy.  and that’s add the col-md-6 to the div columns in your HTML, 
+- To harmonize screen sizes, you’d need to add multiple classes (class=”col-md-6 col-lg-8 col-xl-4”). Fortunately, you can use an attribute selector: [class*="col-"]. The * acts like a wildcard. When placed together with col-, it ensures that every class with at least col- in it will be affected.All three of them would be floated left as they include col- in their names.
+- when you floated the columns, you removed them from the normal flow of the page, and other elements that were below them moved up to take their place, even if it meant overlapping other elements. add .row::after { = fix the page flow without affecting the “rows” themselves, 
+- Add padding right + left on the second column dans [class*="col-"] 
+======================================= */
 
 @media only screen and (min-width: 640px) {
   header {
@@ -230,21 +237,24 @@ footer {
   display: block;
 }
 
+.col-md-6 {
+  width: 50%;
+}
+
+[class*="col-"] {
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
 /* = Unset allows to resets the property to either its initial (original) value or to the inherited value (need to be removed for medium size screens 
 logo and navigation are no longer centered but, instead, left-aligned.= */
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ==============================
 Large devices (1024px or larger)
@@ -252,10 +262,92 @@ Large devices (1024px or larger)
 @media only screen and (min-width: 1024px) {
 }
 
+.col-md-6 {
+  width: 50%;
+}
+
+.col-lg-5 {
+  width: 41.66%;
+}
+
+.col-lg-7 {
+  width: 58.33%;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 
 /* ==============================
 X-large devices (1440px or larger)
 ================================= */
 @media only screen and (min-width: 1440px) {
+}
+
+
+
+/* ============================== About page
+Large devices (1024px or larger)
+================================= */
+
+#about-page h3 { margin-top: 0;}
+
+.image { 
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.col-md-6 {
+  width: 50%;
+}
+
+
+
+/* ============================== 
+CSS animations:
+- Color change from jaune to rouge 1 & 2
+- Amimate the clouds 3 & 4 & 5 & 6
+================================= */
+
+@keyframes color-change {
+  0% {fill: #edc655;}
+  50% {fill: #fcffad;}
+  100% {fill: #f76414;}
+}
+
+.sun {
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes cloud-move {
+  from {transform: translate(0,50px);}
+  to {transform: translate(200px,50px);}
+}
+
+.cloud-front {
+  animation-duration: 20s;
+  animation-name: cloud-move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {transform: translate(446px,48px);}
+  to {transform: translate(100px, 48px);}
+}
+.cloud-move-reverse {
+  animation-duration: 30s;
+  animation-name: cloud-move-reverse;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
 }
