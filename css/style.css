@@ -110,7 +110,7 @@ color :rgb(255, 160, 122)
 }
 
 .logo {
-  max-width: 250px;
+  max-width: 100px;
   text-align: left;
 }
 
@@ -240,7 +240,7 @@ footer {
 
 header {
     text-align: unset;
-    padding: 99px 0 13px;
+    padding: 0 10px;
     font-size: 18px;
 }
 
@@ -368,4 +368,13 @@ CSS animations:
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: linear;
+}
+
+.social-icons {
+  max-width: 500px;
+  display: inline-block;
+}
+
+.social-icons-container {
+  text-align: center;
 }
