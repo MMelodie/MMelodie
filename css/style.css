@@ -6,8 +6,6 @@
   box-sizing: border-box; /* actual width of the container mentioned above would change to 100px (even including the 20px padding and 4px borders) as opposed to 124px. */
 }
 
-
-
 header {
   background-color:#ffe4c4;
   text-align: center;
@@ -17,7 +15,7 @@ header {
   width: 100%
 }
 
-selector {
+.selector {
   margin: 0 auto; /* No spacing to top and bottom and auto spacing to left and right */
 }
 
@@ -85,10 +83,19 @@ img {
   display:inline-block;
   margin:  40px;
 }
+
 .button:hover {
   opacity: 0.8;
 }
 
+.RS {
+  display: inline-block;
+  margin:auto;
+}
+
+.copyright{
+  font-size: 14px;
+}
 
 .background-text {
 color :rgb(255, 160, 122)
@@ -193,6 +200,15 @@ ul > li > a {
   color: #4a4a4a;
 }
 
+.col-xl-4 {
+  width: 25%;
+  float: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: auto;
+  display: inline-block;
+  text-align: center;
+}
 
 footer {
   text-align: center;
@@ -220,17 +236,18 @@ footer {
 ======================================= */
 
 @media only screen and (min-width: 640px) {
-  header {
+}
+
+header {
     text-align: unset;
     padding: 99px 0 13px;
     font-size: 18px;
-  }
+}
 
-  nav {
+nav {
     width: auto;
     float: right;
     margin-top: 4px;
-  }
 }
 
 #hero span {
@@ -344,6 +361,7 @@ CSS animations:
   from {transform: translate(446px,48px);}
   to {transform: translate(100px, 48px);}
 }
+
 .cloud-move-reverse {
   animation-duration: 30s;
   animation-name: cloud-move-reverse;
