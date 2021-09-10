@@ -1,285 +1,112 @@
-/* General:
-- Use em values for headers */
-
-* {
-  box-sizing: border-box; /* actual width of the container mentioned above would change to 100px (even including the 20px padding and 4px borders) as opposed to 124px. */
-}
-
-main {
-  padding-top: 56px;
-}
+/*
+Colors used:
+Primary Color (Grey): #759DA1;
+Secondary Color (Rust): #A1817D;
+Secondary Color (White): #FFFFFF;
+Secondary Color (Lilac): #B6AFE0;
+Secondary Color (Black): #323232
+*/
 
 
 header {
-  background-color:#ffe4c4;
-  box-shadow:  0px 2px 5px 0px rgba(50, 50, 50, 0.75);
-  margin: auto;
-  width: 100%
-  padding 10px 0 4px;
-}
-/* previously text-align: center; in the header */
-
-.selector {
-  margin: 0 auto; /* No spacing to top and bottom and auto spacing to left and right */
+  text-align: unset;
+  background-color: #ffe4c4;
+  text-align: center;
+  padding: 10px 0;
 }
 
 body {
+  font-family: 'Montserrat', sans-serif;
+}
+body {
   background-color: #ffffff;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px; /* Sets the font size to 16px */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px; /* Sets the font size to 16px */
   font-weight: 300; /* Sets the font weight to 300 */
   line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
-  color: rgba(0,0,0);
-}
-
-.majuscules {
-  text-transform: uppercase;
+  color: #323232;
 }
 
 h1, h2, h3, h4 {
   line-height: 1.4;
-
 }
 h1 {
   font-size: 2.75em;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 h2 {
   font-size: 2.25em;
-  font-weight: 700;
-
+  font-weight: 500;
 }
 
 h3 {
   font-size: 1.75em;
   font-weight: 400;
 }
-
 h4 {
   font-size: 1.35em;
-  font-weight: 400;
-}
-
-
-p {
-  font-size: 1.35em;
-  font-weight: 400;
-  color: rgb(127, 140, 141);
+  font-weight: 100;
 }
 
 img {
   width: 100%;
 }
 
+a {
+  color: #ff7f50;
+  text-decoration: none; /* No underlining */
+}
+
+a:visited { /* visited link */
+  color: #ff7f50;
+}
+a:hover,
+a:focus {
+  color: #cc6540;
+  text-decoration: underline;
+}
+a:active { /* selected link */
+  color: #994c30;
+}
 
 .button {
   display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
-  background-color: #FA8072;
+  background-color: #323232;
   color: #ffffff; /* needed to override the default link color */
   font-weight: 400;
+  text-decoration: none;
   padding: 10px;
   border-radius: 3px;
-  border-bottom: 2px solid #994c30; /* width of the border, type, color */
+  border-bottom: 2px solid #323232; /* width of the border, type, color */
   transition-duration: 0.2s;
   transition-property: opacity;
-  display:inline-block;
-  margin:  40px;
 }
-
 .button:hover {
   opacity: 0.8;
 }
-
-.RS {
-  display: inline-block;
-  margin:auto;
+.button.contact {
+  background-color: transparent;
+  color: #323232;
+  text-transform: uppercase;
+  border: 2px solid #323232;
 }
-
-.copyright{
-  font-size: 14px;
+.button.contact:hover {
+  background-color: #323232;
+  color: #ffffff;
 }
-
-.background-text {
-color :rgb(255, 160, 122)
-}
-
-.container {
-  max-width: 1200px;
-}
-
-.row {
-  margin: 25px 0; /* 25px top and bottom, 0 left and right */
-}
-
-.logo {
-  max-width: 100px;
-  text-align: left;
-}
-
-main {
-  padding-top: 133px;
-}
-
-.navtoggle.responsive nav {
-  padding: 24px 0 0;
-}
-.navtoggle.responsive li  {
-  display: block;
-  padding: 10px 0;
-  border-top: 1px solid rgba(255,127,80,0.5);
-}
-
-.navtoggle.responsive li:last-child  {
-  padding: 0 0 10px;
-}
- 
-/*
-Colors used:
-Primary Color (Black): #000000; <!-- rgb(0, 0, 0)--> 
-Secondary Color (Grey): #7F8C8D 	<!-- rgb(127, 140, 141 ) --> 
-Tertiary color (orange): #FA8072	<!--rgb(250, 128, 114)--> 
-Light tertiary color (light orange): #FFA07A <!-- rgb(255, 160, 122) --> 
-*/
-
 
 /* Layout styling */
-
 .container {
   padding: 0 15px;
-  text-align: center; /* Centers text */
 }
-
-
-#work .row { 
-padding-bottom: 25px; 
-border-bottom: 1px solid #4a4a4a; 
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
-
-
-#hero h1 {
-  text-align: center; /* Centers text */
-  margin: 0;
-  padding: 0.67em 0;
-}
-
-#hero {
-  background-color: #ffe4c4;
-  padding: 20px 0;
-  display: inline-block;
-  width: 100%;
-}
-
-
-nav > ul {
-  margin: 0;
-  padding: 0;
-}
-
-
-nav > ul > li > a {
-  padding: 0 15px;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #4a4a4a;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-ul > li {
-  display: inline-block;
-}
-
-ul > li > a {
-  padding: 0 15px;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #4a4a4a;
-}
-
-.col-xl-4 {
-  width: 25%;
-  float: center;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin: auto;
-  display: inline-block;
-  text-align: center;
-}
-
-footer {
-  text-align: center;
-  /* position:fixed;  has been removed bcse otherwise, footer is delated? */
-  margin: auto;
-  display: inline-block;
-  width: 100%
-} 
-
-.navtoggle, .navtoggle.responsive {
-  position: relative;
-}
-
-.navtoggle li .icon {
-  position: absolute;
-  right: 0;
-  top: 2px;
-  font-size: 20px;
-  padding: 0;
-}
-
-
-
-
-
-/* What it does is hide (display: none;) all list elements (<li>) except for the last one (:last-child is pseudo code that targets the last “child” of it’s parent element). This will hide all the list elements except for the hamburger menu icon. */
-
-/* = Cours 1.8 ======================================================================================================== */
-
-
-/* ============================== Breakpoint pour ecrans 640px et + (to 1024px ici) = "Ne sera appliqué que..."
-- @media only screen and (min-width: 640px) { } Medium devices (640px and larger)
-- Unset allows to resets the property to either its initial (original) value or to the inherited value (need to be removed for medium size screenslogo and navigation are no longer centered but, instead, left-aligned.
-- <nav> element was with a width of 100%. Reset it to auto will no longer takes it up to the full width of the screen but, still as wide as its content and aligned with the logo. 
-- assign it the float: right; property, as this will ensure it floats to the right of the logo . 
-- As we are on new size screens, the little white space between menu and hero is back: change the value of the top padding to 99px
-- Font sizes need to switch from 16px to 18px for larger screen size. No modif on titles if em values are used otherwise ADJUST THEM
-- heading in your hero section: both the heading and paragraph have been centered. Add text-align: center; to #hero + Have <span> tag in your <h1> be on the next line (so that the “I’m a…” line starts a new line). To do this, change the display of the <span> tag in your hero section from inline (the default) to block. (refer to #hero span )
-- For a total of 12 columns = 100% we want to /2 and have a 6 colomns = 50% // The col is what tells us this is for columns, the md stands for medium devices (screen sizes), and the 6 is for the 6-column span we want this column to occupy.  and that’s add the col-md-6 to the div columns in your HTML, 
-- To harmonize screen sizes, you’d need to add multiple classes (class=”col-md-6 col-lg-8 col-xl-4”). Fortunately, you can use an attribute selector: [class*="col-"]. The * acts like a wildcard. When placed together with col-, it ensures that every class with at least col- in it will be affected.All three of them would be floated left as they include col- in their names.
-- when you floated the columns, you removed them from the normal flow of the page, and other elements that were below them moved up to take their place, even if it meant overlapping other elements. add .row::after { = fix the page flow without affecting the “rows” themselves, 
-- Add padding right + left on the second column dans [class*="col-"] 
-======================================= */
-
-@media only screen and (min-width: 640px) {
-}
-
-header {
-    text-align: unset;
-    padding: 0 10px;
-    font-size: 18px;
-}
-
-nav {
-    width: auto;
-    float: right;
-    margin-top: 4px;
-}
-
-#hero span {
-  display: block;
-}
-
-.col-md-6 {
-  width: 50%;
-}
-
-[class*="col-"] {
-  float: left;
-  padding-left: 10px;
-  padding-right: 10px;
+.row {
+  margin: 25px 0; /* 25px top and bottom, 0 left and right */
 }
 
 .row::after {
@@ -288,141 +115,97 @@ nav {
   display: table;
 }
 
+.center {
+  text-align: center;
+}
+
+.logo {
+  max-width: 250px;
+}
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {
+  header {
+    text-align: unset;
+    padding: 20px 0 13px;
+  }
+
+  nav {
+    width: auto;
+    float: right;
+    margin-top: 4px;
+  }
+}
 nav > ul > li {
   display: inline-block;
 }
-/* ok previously a general quiery but now just for specific screens as we change it on a hamburger menu for little ones */
 
-.navtoggle li:not(:last-child) {
-  display: none;
+nav > ul > li > a {
+  padding: 0 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #4a4a4a;
 }
-/* ok hide nav item */
 
-.navtoggle li:not(:last-child) {
+#hero {
+  background-color: #ffe4c4;
+  padding: 20px 0;
   display: inline-block;
+  width: 100%;
+  text-align: center
+}
+#hero span {
+  display: block;
 }
 
-
-nav > ul {
-  margin: 1em 0;
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {
 }
-
-
-
-
-
-/* = Unset allows to resets the property to either its initial (original) value or to the inherited value (need to be removed for medium size screens 
-logo and navigation are no longer centered but, instead, left-aligned.= */
-
 /* ==============================
 Large devices (1024px or larger)
 ================================= */
 @media only screen and (min-width: 1024px) {
 }
-
-.col-md-6 {
-  width: 50%;
-}
-
-.col-lg-5 {
-  width: 41.66%;
-}
-
-.col-lg-7 {
-  width: 58.33%;
-}
-
-.container {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-
 /* ==============================
 X-large devices (1440px or larger)
 ================================= */
 @media only screen and (min-width: 1440px) {
 }
-
-
-
-/* ============================== About page
-Large devices (1024px or larger)
+/* ==============================
+Extra-large devices (1920px or larger)
 ================================= */
-
-#about-page h3 { margin-top: 0;}
-
-.image { 
-  width: 100%;
-  max-width: 100%;
-  height: auto;
+@media only screen and (min-width: 1920px) {
 }
 
 .col-md-6 {
   width: 50%;
 }
 
-.navtoggle li:not(:last-child) {
-  display: inline-block;
+[class*="col-"] {
+  float: left;
 }
-/* Will not be activated on big screens */
-
-
-
-
-/* ============================== 
-CSS animations:
-- Color change from jaune to rouge 1 & 2
-- Amimate the clouds 3 & 4 & 5 & 6
-================================= */
-
 @keyframes color-change {
   0% {fill: #edc655;}
   50% {fill: #fcffad;}
   100% {fill: #f76414;}
 }
-
 .sun {
-  animation-duration: 4s;
-  animation-name: color-change;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: linear;
+  animation: 4s color-change infinite alternate linear;
 }
-
 @keyframes cloud-move {
   from {transform: translate(0,50px);}
   to {transform: translate(200px,50px);}
 }
-
 .cloud-front {
-  animation-duration: 20s;
-  animation-name: cloud-move;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: linear;
+  animation: 30s cloud-move infinite alternate linear;
 }
-
 @keyframes cloud-move-reverse {
   from {transform: translate(446px,48px);}
   to {transform: translate(100px, 48px);}
 }
-
-.cloud-move-reverse {
-  animation-duration: 30s;
-  animation-name: cloud-move-reverse;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: linear;
-}
-
-.social-icons {
-  max-width: 500px;
-  display: inline-block;
-}
-
-.social-icons-container {
-  text-align: center;
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
 }
