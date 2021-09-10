@@ -1,24 +1,27 @@
 /* General:
 - Use em values for headers */
 
-
 * {
   box-sizing: border-box; /* actual width of the container mentioned above would change to 100px (even including the 20px padding and 4px borders) as opposed to 124px. */
 }
 
+main {
+  padding-top: 56px;
+}
+
+
 header {
   background-color:#ffe4c4;
-  text-align: center;
   box-shadow:  0px 2px 5px 0px rgba(50, 50, 50, 0.75);
-  position:fixed;
   margin: auto;
   width: 100%
+  padding 10px 0 4px;
 }
+/* previously text-align: center; in the header */
 
 .selector {
   margin: 0 auto; /* No spacing to top and bottom and auto spacing to left and right */
 }
-
 
 body {
   background-color: #ffffff;
@@ -118,13 +121,18 @@ main {
   padding-top: 133px;
 }
 
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
+}
+.navtoggle.responsive li  {
+  display: block;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255,127,80,0.5);
+}
 
-
-
-
-/* Mélodie Miribel text-transform: capitalize; */
-/* Melodie M text-transform: capitalize; */
-
+.navtoggle.responsive li:last-child  {
+  padding: 0 0 10px;
+}
  
 /*
 Colors used:
@@ -135,16 +143,12 @@ Light tertiary color (light orange): #FFA07A <!-- rgb(255, 160, 122) -->
 */
 
 
-
-
-
 /* Layout styling */
 
 .container {
   padding: 0 15px;
   text-align: center; /* Centers text */
 }
-
 
 
 #work .row { 
@@ -168,13 +172,10 @@ border-bottom: 1px solid #4a4a4a;
 
 
 nav > ul {
-  list-style-type: none;
+  margin: 0;
   padding: 0;
 }
 
-nav > ul > li {
-  display: inline-block;
-}
 
 nav > ul > li > a {
   padding: 0 15px;
@@ -182,7 +183,6 @@ nav > ul > li > a {
   font-weight: 700;
   color: #4a4a4a;
 }
-
 
 ul {
   list-style-type: none;
@@ -217,6 +217,24 @@ footer {
   display: inline-block;
   width: 100%
 } 
+
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  font-size: 20px;
+  padding: 0;
+}
+
+
+
+
+
+/* What it does is hide (display: none;) all list elements (<li>) except for the last one (:last-child is pseudo code that targets the last “child” of it’s parent element). This will hide all the list elements except for the hamburger menu icon. */
 
 /* = Cours 1.8 ======================================================================================================== */
 
@@ -270,6 +288,29 @@ nav {
   display: table;
 }
 
+nav > ul > li {
+  display: inline-block;
+}
+/* ok previously a general quiery but now just for specific screens as we change it on a hamburger menu for little ones */
+
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+/* ok hide nav item */
+
+.navtoggle li:not(:last-child) {
+  display: inline-block;
+}
+
+
+nav > ul {
+  margin: 1em 0;
+}
+
+
+
+
+
 /* = Unset allows to resets the property to either its initial (original) value or to the inherited value (need to be removed for medium size screens 
 logo and navigation are no longer centered but, instead, left-aligned.= */
 
@@ -298,6 +339,7 @@ Large devices (1024px or larger)
 }
 
 
+
 /* ==============================
 X-large devices (1440px or larger)
 ================================= */
@@ -321,6 +363,12 @@ Large devices (1024px or larger)
 .col-md-6 {
   width: 50%;
 }
+
+.navtoggle li:not(:last-child) {
+  display: inline-block;
+}
+/* Will not be activated on big screens */
+
 
 
 
