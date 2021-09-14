@@ -1,10 +1,10 @@
 /*
 Colors used:
 Primary Color (Grey): #759DA1;
-Secondary Color (Rust): #A1817D;
+Secondary Color (background): #ffe4c4;
 Secondary Color (White): #FFFFFF;
-Secondary Color (Lilac): #B6AFE0;
-Secondary Color (Black): #323232
+Secondary Color (Orange): ##ff7f50;
+Secondary Color (Black): #000000;
 */
 
 
@@ -18,6 +18,7 @@ header {
 body {
   font-family: 'Montserrat', sans-serif;
 }
+
 body {
   background-color: #ffffff;
   font-family: 'Montserrat', sans-serif;
@@ -25,6 +26,12 @@ body {
   font-weight: 300; /* Sets the font weight to 300 */
   line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
   color: #323232;
+}
+
+footer {
+  display: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h1, h2, h3, h4 {
@@ -61,6 +68,7 @@ a {
 a:visited { /* visited link */
   color: #ff7f50;
 }
+
 a:hover,
 a:focus {
   color: #cc6540;
@@ -72,38 +80,41 @@ a:active { /* selected link */
 
 .button {
   display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
-  background-color: #323232;
+  background-color: #ff7f50;
   color: #ffffff; /* needed to override the default link color */
   font-weight: 400;
-  text-decoration: none;
   padding: 10px;
   border-radius: 3px;
-  border-bottom: 2px solid #323232; /* width of the border, type, color */
+  border-bottom: 2px solid #994c30; /* width of the border, type, color */
   transition-duration: 0.2s;
-  transition-property: opacity;
+  transition: 0.2s opacity;
+  border-color: #ff7f50;
 }
+
 .button:hover {
   opacity: 0.8;
+  text-decoration: none;
+
 }
 .button.contact {
   background-color: transparent;
-  color: #323232;
+  color: #ff7f50;
   text-transform: uppercase;
-  border: 2px solid #323232;
+  border: 2px solid #ff7f50;
 }
 .button.contact:hover {
-  background-color: #323232;
+  background-color: #ff7f50;
   color: #ffffff;
 }
 
+
+
 /* Layout styling */
-.container {
-  padding: 0 15px;
-}
 .container {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 15px;
 }
 .row {
   margin: 25px 0; /* 25px top and bottom, 0 left and right */
@@ -115,13 +126,121 @@ a:active { /* selected link */
   display: table;
 }
 
-.center {
+.logo {
+  max-width: 100px;
+}
+
+.presentation-title {
+  font-size-adjust: 28px;
+}
+
+.majuscules {
+  text-transform: uppercase; 
+  text-align: center;
+  padding-top: 20px;
+  margin: none;
+}
+
+
+
+/* ===== Footer ===== */
+
+.copyrigh {
+  font-size: 8px;
+}
+
+.footer {
+  text-align: center;
+  background-color: #DAE5E7;
+  margin: none;
+  border-color: #DAE5E7;
+  border: 10px;
+  font-size: 14px;
+}
+
+.fa-arrow-down {
+  padding-bottom: 23px;
+}
+
+.copyright{
+  font-weight: bold;
+  font-size: small;
+  margin-bottom: 0%;
+  border: 20px;
+  outline-color: #779FA6;
+}
+
+.tel {
+  font-weight: bold;
+}
+
+.social-icons{
+  padding: 0%;
+}
+
+/* ===== Footer ===== */
+
+
+
+
+/* ===== About me ===== */
+
+.few-lines {
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 20px;
+  margin: none;
+  font: 14px;
+}
+
+.about-me {
+  padding-left: 10px;
+  font-size: 14px;
+}
+
+/* ===== About me ===== */
+
+
+
+/* ===== Projects ===== */
+
+.project-header {
+  font-size: 14px;
   text-align: center;
 }
 
-.logo {
-  max-width: 250px;
+.project-title {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #ff7f50;
+  font-weight: bold;
 }
+
+.project-category {
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.project-tag {
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.p1-context {
+  text-align: center;
+  margin-right: 20px;  
+  margin-left: 20px;
+}
+
+/* ===== Projects ===== */
+
+
+
+
 /* ==============================
 Medium devices (640px and larger)
 ================================= */
@@ -137,9 +256,11 @@ Medium devices (640px and larger)
     margin-top: 4px;
   }
 }
+
 nav > ul > li {
   display: inline-block;
 }
+
 
 nav > ul > li > a {
   padding: 0 15px;
@@ -150,35 +271,47 @@ nav > ul > li > a {
 
 #hero {
   background-color: #ffe4c4;
-  padding: 20px 0;
+  padding: 2px 0;
   display: inline-block;
   width: 100%;
   text-align: center
 }
+
 #hero span {
   display: block;
 }
+
+
 
 /* ==============================
 Medium devices (640px and larger)
 ================================= */
 @media only screen and (min-width: 640px) {
 }
+
 /* ==============================
 Large devices (1024px or larger)
 ================================= */
 @media only screen and (min-width: 1024px) {
 }
+
 /* ==============================
 X-large devices (1440px or larger)
 ================================= */
 @media only screen and (min-width: 1440px) {
 }
+
 /* ==============================
 Extra-large devices (1920px or larger)
 ================================= */
 @media only screen and (min-width: 1920px) {
 }
+
+
+
+
+
+/* ===== CSS ANIMATION ===== */
 
 .col-md-6 {
   width: 50%;
@@ -209,3 +342,5 @@ Extra-large devices (1920px or larger)
 .cloud-back {
   animation: 34s cloud-move-reverse infinite alternate linear;
 }
+
+/* ===== CSS ANIMATION ===== */
