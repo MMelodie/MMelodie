@@ -238,8 +238,23 @@ a:active { /* selected link */
 
 /* ===== Projects ===== */
 
+nav > ul > li {
+  list-style: none;
+}
 
+nav > ul > li:not(:last-child) {
+  display: none;
+}
 
+.responsive nav > ul > li:not(:last-child) {
+  display: block;
+}
+
+nav > ul > li:last-child {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
 
 /* ==============================
 Medium devices (640px and larger)
@@ -255,11 +270,16 @@ Medium devices (640px and larger)
     float: right;
     margin-top: 4px;
   }
+
+  nav > ul > li:last-child {
+    display: none;
+  } 
+
+  nav > ul > li:not(:last-child) {
+    display: inline-block;
+  }
 }
 
-nav > ul > li {
-  display: inline-block;
-}
 
 
 nav > ul > li > a {
