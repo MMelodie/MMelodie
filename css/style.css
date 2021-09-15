@@ -370,8 +370,3 @@ Extra-large devices (1920px or larger)
 }
 
 /* ===== CSS ANIMATION ===== */
-
-.project-image-container {
-  padding: 10px;
-  box-sizing: border-box;
-}
