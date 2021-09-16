@@ -34,6 +34,7 @@ footer {
     display: center;
     margin-left: auto;
     margin-right: auto;
+    clear: both;
 }
 
 h1,
