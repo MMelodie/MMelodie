@@ -44,22 +44,36 @@
             </div>
         </div>
         <div id="work">
-            <!-- div jaune = container = My work: title + diff projects -Appliquera tout jusqu'a ce que ce div se ferme -->
             <div class="container">
-                <h2 class="majuscules">My work</h2>
+                <div class="title part">
+                    <div class="title">
+                        <h2 class="majuscules"> My work
+                            <span class="highlight"></span>
+                        </h2>
+                    </div>
+                </div>
             </div>
-            <div class="row">
-                <picture class="column col-md-6 col-lg-7">
-                    <source srcset="images/P1/Mockup-mobile/Entree-mockup-mobile.jpg" media="(max-width:767px)">
-                    <img src="images/P1/Mockup-desktop/Entree-desktop-mockup.jpg" alt="byyourself.jpg">
-                </picture>
+        </div>
+        <!-- project section: By yourself -->
+        <div class="row">
+            <!-- Left column imag -->
+            <div class="image col-sm-6 col-md-6 col-lg-8">
+                <!-- Lien projets sur image -->
+                <a href="byyourself.html" aria-labelledby="by-head" aria-describedby="by-desc">
+                    <picture>
+                        <source srcset="images/P1/Mockup-mobile/Entree-mockup-mobile.jpg" media="(max-width:767px)">
+                        <img src="images/P1/Mockup-desktop/Entree-desktop-mockup.jpg" alt="byyourself.jpg">
+                    </picture>
+                </a>
             </div>
-            <div class="column col-md-6 col-lg-5">
-                <h3> BY Your'Self </h3>
-                <h4> How to get professional support for manual projects </h4>
-                <p>Case study / Service app </p>
-                <a href="byyourself.html" class="button"> Read more</a>
-                <!-- button or link label -->
+            <!-- Right column text+button -->
+            <div class="text-content col-sm-6 col-md-6 col-lg-4">
+                <h3 id="by-head"> BY Your'Self </h3>
+                <p class="tags-projects">Case study / Service app </p>
+                <p id="by-desc"> How to get professional support for manual projects </p>
+                <a href="byyourself.html" class="button" id="by-link" aria-labelledby="by-link by-head" aria-describedby="by-desc"> Read more</a>
+                <br>
+                <br>
             </div>
         </div>
     </main>
