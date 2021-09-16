@@ -76,7 +76,7 @@ a {
 
 a:visited {
     /* visited link */
-    color: #ffffff;
+    color: #994c30
 }
 
 a:hover,
@@ -87,7 +87,7 @@ a:focus {
 
 a:active {
     /* selected link */
-    color: #994c30;
+    color: #ffffff;
 }
 
 .button {
