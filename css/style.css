@@ -355,7 +355,7 @@ Extra-large devices (1920px or larger)
 @media only screen and (min-width: 1920px) {}
 
 
-/* ===== CSS ANIMATION ===== */
+/* ===== BEGINING CSS ANIMATION ===== */
 
 [class*="col-"] {
     float: left;
@@ -404,4 +404,4 @@ Extra-large devices (1920px or larger)
 }
 
 
-/* ===== CSS ANIMATION ===== */
+/* ===== END CSS ANIMATION ===== */
