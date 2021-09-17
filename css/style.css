@@ -12,6 +12,7 @@ header {
     background-color: #ffe4c4;
     text-align: center;
     padding: 10px 0;
+    padding-top: 20px;
 }
 
 div {
@@ -122,6 +123,10 @@ a:active {
     color: #994c30;
 }
 
+.highlight {
+    color: #ff7f50;
+}
+
 
 /* Layout styling */
 
@@ -145,6 +150,7 @@ a:active {
 
 .logo {
     max-width: 100px;
+    padding-top: 20px;
 }
 
 .presentation-title {
